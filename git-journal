@@ -1,0 +1,76 @@
+Git ---- Repos-----
+        /    \      \
+  Commit     Clone  Init
+  /   \
+Log   Diff
+
+
+Commit take snap shots of multiple files at time commit.
+
+Git command
+Install: sudo apt-get install git
+Update git to latest version: git clone https://github.com/git/git
+Colorize git output: git config --global color.ui auto
+List all commits: enter the project directory then "git log"
+- "git log -n 1" : show only the latest commit
+Diff: git diff first-id second-id
+Show: git show <id> -> show diff of the commit id with its parent
+
+Revert to previous commit: git checkout <id>
+
+Init git: enter the project directory then "git init"
+Reset git: when you want to withdraw a file from the commit, use "git reset <file-name>"
+
+Add to staging: git add <file-name>
+Commit: git commit -m "Commit message"
+
+Comparing the working file with staging area file, use "git diff"
+Comparring the staging area with repos, use "git diff --staged"
+Reset all changes: "git reset --hard"
+
+Checkout master: git checkout master -> user when you want to go back to the latest version master branch
+
+Branch:
+- "git branch" : view all branches
+- "git branch <label>": create a new branch with the label
+- "git checkout <label">: switch to the branch
+- "git log --graph --oneline <branch1> <branch2>": show the graph of commits on two branches
+
+- "git checkout -b <new-branch">", create a new branch and switch to that branch
+- "git merge <branch1> <branch2>
+- "git branch -d <branch>" delete a branch
+
+
+Github:
+- "git remote add origin <link>": add remote source with provided link
+- "git remote -v": show remote with more info
+- "git push origin <branch>": push all commits in a branch to the remote origin
+
+
+Caching password: https://help.github.com/articles/caching-your-github-password-in-git/
+
+Reflection:
+How can you use the commands git log and git diff to view the history of files?
+- Use git log to list all commits. Use git diff new-version old-version to track changes in each commit.
+
+Why do you think some version control systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file separately?
+- Git works with coding, changes in one file may relate to other files. While Google docs deal less with this issue.
+
+How might using version control make you more confident to make changes that could break something?
+- We can also revert to the older version when it was working, see what changes that may lead to the break and fix them.
+
+Now that you have your workspace set up, what do you want to try using Git for?
+- Maintain my own projects
+
+How is the staging area different from the working directory and the repository? What value do you think it offers?
+- A temporary staging before commit.
+
+How can you use the staging area to make sure you have one commit per logical change?
+- View status before commit
+
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+- Try a experimental features, in development, without affecting the main branch
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+- Automerging: fast <> not correct all the time
+- Merge manually: slow <> correct
