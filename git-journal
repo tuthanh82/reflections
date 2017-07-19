@@ -8,44 +8,49 @@ Log   Diff
 Commit take snap shots of multiple files at time commit.
 
 Git command
-Install: sudo apt-get install git
-Update git to latest version: git clone https://github.com/git/git
-Colorize git output: git config --global color.ui auto
-List all commits: enter the project directory then "git log"
-- "git log -n 1" : show only the latest commit
-Diff: git diff first-id second-id
-Show: git show <id> -> show diff of the commit id with its parent
+Install & Setup: 
+"sudo apt-get install git"
+"git clone https://github.com/git/git": Update git to latest version: 
+"git config --global color.ui auto" Colorize git output: 
 
-Revert to previous commit: git checkout <id>
+List:
+"git log": List all commits when enter the project directory
+"git log -n 1" : show only the latest commit
 
-Init git: enter the project directory then "git init"
-Reset git: when you want to withdraw a file from the commit, use "git reset <file-name>"
+Diff:
+"git diff first-id second-id": find differences between the first-id commit and the second-id 
+"git show <id>": show diff of the commit id with its parent
+"git checkout <id>": Revert to previous commit
+"git diff": comparing the working file with staging area file, use 
+"git diff --staged": comparring the staging area with repos, use 
 
-Add to staging: git add <file-name>
-Commit: git commit -m "Commit message"
+Init:
+"git init": enter the project directory then create an empty repository
 
-Comparing the working file with staging area file, use "git diff"
-Comparring the staging area with repos, use "git diff --staged"
-Reset all changes: "git reset --hard"
+Commit:
+"git add <file-name>": Add a file to staging 
+"git commit -m "Commit message" ": commit change with a comment message
+"git reset <file-name>": Reset git, when you want to withdraw a file from the commit
+"git reset --hard": reset all changes
 
-Checkout master: git checkout master -> user when you want to go back to the latest version master branch
 
 Branch:
-- "git branch" : view all branches
-- "git branch <label>": create a new branch with the label
-- "git checkout <label">: switch to the branch
-- "git log --graph --oneline <branch1> <branch2>": show the graph of commits on two branches
+"git branch" : view all branches
+"git branch <label>": create a new branch with the label
+"git checkout <label">: switch to the branch
+"git log --graph --oneline <branch1> <branch2>": show the graph of commits on two branches
 
-- "git checkout -b <new-branch">", create a new branch and switch to that branch
-- "git merge <branch1> <branch2>
-- "git branch -d <branch>" delete a branch
+"git checkout -b <new-branch">", create a new branch and switch to that branch
+"git merge <branch1> <branch2>
+"git branch -d <branch>" delete a branch
+
+"git checkout master": use when you want to go back to the latest version master branch
 
 
 Github:
-- "git remote add origin <link>": add remote source with provided link
-- "git remote -v": show remote with more info
-- "git push origin <branch>": push all commits in a branch to the remote origin
-
+"git remote add origin <link>": add remote source with provided link
+"git remote -v": show remote with more info
+"git push origin <branch>": push all commits in a branch to the remote origin
 
 Caching password: https://help.github.com/articles/caching-your-github-password-in-git/
 
