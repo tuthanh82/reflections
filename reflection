@@ -1,1 +1,27 @@
-Create a new file for reflections only
+How can you use the commands git log and git diff to view the history of files?
+- Use git log to list all commits. Use git diff new-version old-version to track changes in each commit.
+
+Why do you think some version control systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file separately?
+- Git works with coding, changes in one file may relate to other files. While Google docs deal less with this issue.
+
+How might using version control make you more confident to make changes that could break something?
+- We can also revert to the older version when it was working, see what changes that may lead to the break and fix them.
+
+Now that you have your workspace set up, what do you want to try using Git for?
+- Maintain my own projects
+
+How is the staging area different from the working directory and the repository? What value do you think it offers?
+- A temporary staging before commit.
+
+How can you use the staging area to make sure you have one commit per logical change?
+- View status before commit
+
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+- Try a experimental features, in development, without affecting the main branch
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+- Automerging: fast <> not correct all the time
+- Merge manually: slow <> correct
+
+When would you want to use a remote repository rather than keeping all your work local?
+- When working with multiple contributors, or work in a different machine than mine
